@@ -22,7 +22,7 @@ export default function Project2() {
         <strong>Technologies:</strong> Unity, C#, Game Design, Animation, UI/UX
       </p>
       <video controls width="480" style={{ borderRadius: '8px', margin: '1rem 0' }}>
-        <source src="/assets/2025-03-13 20-57-27 (1).mp4" type="video/mp4" />
+        <source src="/assets/gym-tycoon.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
