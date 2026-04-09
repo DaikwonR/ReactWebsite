@@ -5,7 +5,12 @@ export default function Home() {
     <div className="homepage-container">
       <header className="homepage-hero">
         <h1>Welcome to My Portfolio</h1>
-        {/* Profile photo removed as requested */}
+        <img 
+          src="/assets/Me.jpg" 
+          alt="Daikwon Raney" 
+          className="profile-photo"
+          style={{ width: '180px', height: '180px', borderRadius: '50%', objectFit: 'cover', margin: '1.5rem auto', display: 'block', boxShadow: '0 4px 24px rgba(124,58,237,0.12)' }}
+        />
         <p>Hello! My name is Daikwon Raney and I'm a Motivated Software Developer and Quality Assurance professional
             with hands-on experience in full-stack development, 
             backend refactoring, automated testing, 

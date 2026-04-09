@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const softwareLogos = [
@@ -15,7 +16,7 @@ const softwareLogos = [
   { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg', alt: 'C++' },
 ];
 
-export default function Projects() {
+export default function Projects({ onProjectPageClick }) {
   return (
     <div className="projects-container">
       <div className="animated-bg">
@@ -29,26 +30,20 @@ export default function Projects() {
           />
         ))}
       </div>
-      <h1>Portfolio / Projects</h1>
+      <h1>Portfolio Projects</h1>
       <div className="project">
-        <h2>Full Stack Software Engineer, Kairos Water</h2>
-        <p><strong>January 2026 - March 2026</strong> &mdash; Hybrid (Salt Lake City, UT)</p>
-        <ul>
-          <li>Restructured legacy backend codebase to enhance maintainability, scalability, and performance.</li>
-          <li>Implemented secure and efficient backend-to-database connections for reliable data handling.</li>
-          <li>Conducted comprehensive backend-to-frontend integration testing to ensure seamless functionality and reduce defects.</li>
-        </ul>
-        <p><strong>Tech Stack:</strong> [AWS (RDS, S3, API Gateway, Lambda) • CloudFormation (YAML) • JavaScript (React + Vite) • PostgreSQL]</p>
+        <h2>Capstone Project</h2>
+        <p><strong>Description:</strong> This project showcases a majority of my skills and how I wanted to express myself through the game. It features NPC development, world building, and engaging gameplay.</p>
+        <button className="project-link-btn" onClick={() => onProjectPageClick && onProjectPageClick(0)}>
+          View Capstone Project
+        </button>
       </div>
       <div className="project">
-        <h2>Software Developer in Test/Quality Assurance, FullBay</h2>
-        <p><strong>October 2025 - December 2025</strong> &mdash; Salt Lake City, Utah</p>
-        <ul>
-          <li>Honed software development and QA skills in a production environment focused on heavy-duty repair shop management software.</li>
-          <li>Managed GitHub repositories and task workflows to streamline team collaboration, issue tracking, and deployment processes.</li>
-          <li>Improved multi-language code efficiency through testing and optimization across multiple platforms.</li>
-        </ul>
-        <p><strong>Tech Stack:</strong> [Java, Playwright, AWS]</p>
+        <h2>Gym Tycoon</h2>
+        <p><strong>Description:</strong> Simple repetitive simulator. This project is about building a gym management game with a focus on core systems and gameplay loops.</p>
+        <button className="project-link-btn" onClick={() => onProjectPageClick && onProjectPageClick(1)}>
+          View Gym Tycoon
+        </button>
       </div>
     </div>
   );
