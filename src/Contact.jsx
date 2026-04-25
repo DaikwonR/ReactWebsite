@@ -17,6 +17,7 @@ export default function Contact() {
           <li><span className="contact-list-icon">📧</span> Email: <a href="mailto:daikwon.raney@gmail.com">daikwon.raney@gmail.com</a></li>
           <li><span className="contact-list-icon">💼</span> LinkedIn: <a href="https://www.linkedin.com/in/daikwon-raney-2a15a8294/" target="_blank" rel="noopener noreferrer">Daikwon Raney</a></li>
           <li><span className="contact-list-icon">📱</span> Phone: 832-870-2176</li>
+          <li><span className="contact-list-icon">📄</span> <a href="https://docs.google.com/document/d/1qhN85cQEBavsygj26kzAuwFBilKxqsr5jaPIQuDNeSI/edit?tab=t.0#heading=h.kgica5kc1frw" target="_blank" rel="noopener noreferrer">View My Resume</a></li>
         </ul>
       </div>
     </div>
