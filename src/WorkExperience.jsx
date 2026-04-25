@@ -40,6 +40,16 @@ export default function WorkExperience() {
           ))}
         </div>
         <div className="work-project-card">
+          <h2>Software Engineering Intern, Motorola Solutions</h2>
+          <p><strong>Mar 2026 – May 2026</strong> &mdash; Remote</p>
+          <ul>
+            <li>Developed web-based features and tools to support internal and customer-facing applications.</li>
+            <li>Built and maintained data integration pipelines to ensure accurate and efficient data flow between systems.</li>
+            <li>Collaborated with engineers to debug issues, optimize performance, and improve system reliability.</li>
+            <li>Contributed to code reviews and followed best practices for clean, maintainable, and scalable code.</li>
+          </ul>
+        </div>
+        <div className="work-project-card">
           <h2>Full Stack Software Engineer, Kairos Water</h2>
           <p><strong>Jan 2026 - Mar 2026</strong> &mdash; Hybrid (Salt Lake City, UT)</p>
           <ul>
@@ -58,16 +68,6 @@ export default function WorkExperience() {
             <li>Improved multi-language code efficiency through testing and optimization across multiple platforms.</li>
           </ul>
           <p><strong>Tech Stack:</strong> Java, Playwright, AWS</p>
-        </div>
-        <div className="work-project-card">
-          <h2>Software Engineering Intern, Motorola Solutions</h2>
-          <p><strong>May 2024 – Aug 2024</strong> &mdash; Remote</p>
-          <ul>
-            <li>Developed web-based features and tools to support internal and customer-facing applications.</li>
-            <li>Built and maintained data integration pipelines to ensure accurate and efficient data flow between systems.</li>
-            <li>Collaborated with engineers to debug issues, optimize performance, and improve system reliability.</li>
-            <li>Contributed to code reviews and followed best practices for clean, maintainable, and scalable code.</li>
-          </ul>
         </div>
       </div>
     </div>
