@@ -1,3 +1,327 @@
+/* About Page Red/Purple/Silver Theme */
+.about-bg-redpurple {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e53935 0%, #b388ff 60%, #cfd8dc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+.about-card-redpurple {
+  background: rgba(255,255,255,0.92);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(44,0,77,0.18);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border: 2px solid #b388ff;
+}
+.about-header-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 2.1rem;
+}
+.about-icon {
+  filter: drop-shadow(0 2px 4px #e5393555);
+  transition: transform 0.2s;
+}
+.about-icon:hover {
+  transform: scale(1.18) rotate(-8deg);
+}
+.about-title-redpurple {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #e53935;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+.about-underline-redpurple {
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(90deg, #e53935 0%, #b388ff 100%);
+  border-radius: 3px;
+  margin: 0 auto 1.5rem auto;
+}
+.about-text-redpurple {
+  font-size: 1.13rem;
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+}
+.about-card-redpurple section {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+.about-card-redpurple h2 {
+  color: #b388ff;
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+}
+.about-card-redpurple ul {
+  margin: 0 0 0.7rem 1.2rem;
+  padding: 0;
+  color: #444;
+  font-size: 1rem;
+}
+.about-card-redpurple li {
+  margin-bottom: 0.3rem;
+}
+
+/* Project Page Red/Purple/Silver Theme */
+.project-bg-redpurple {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e53935 0%, #b388ff 60%, #cfd8dc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+.project-card-redpurple {
+  background: rgba(255,255,255,0.92);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(44,0,77,0.18);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border: 2px solid #e53935;
+}
+.project-header-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 2.1rem;
+}
+.project-icon {
+  filter: drop-shadow(0 2px 4px #b388ff55);
+  transition: transform 0.2s;
+}
+.project-icon:hover {
+  transform: scale(1.18) rotate(8deg);
+}
+.project-title-redpurple {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #b388ff;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+.project-underline-redpurple {
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(90deg, #b388ff 0%, #e53935 100%);
+  border-radius: 3px;
+  margin: 0 auto 1.5rem auto;
+}
+.project-text-redpurple {
+  font-size: 1.13rem;
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+}
+/* Contact Page Red/Purple/Silver Theme */
+.contact-bg-redpurple {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e53935 0%, #b388ff 60%, #cfd8dc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.contact-card-redpurple {
+  background: rgba(255,255,255,0.85);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(44,0,77,0.18);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border: 2px solid #b388ff;
+}
+
+.contact-header-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 2.1rem;
+}
+
+.contact-icon {
+  filter: drop-shadow(0 2px 4px #e5393555);
+  transition: transform 0.2s;
+}
+.contact-icon:hover {
+  transform: scale(1.18) rotate(-8deg);
+}
+
+.contact-title-redpurple {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #e53935;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.contact-underline-redpurple {
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(90deg, #e53935 0%, #b388ff 100%);
+  border-radius: 3px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.contact-list-redpurple {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.13rem;
+  color: #2d2d2d;
+}
+.contact-list-redpurple li {
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
+}
+.contact-list-redpurple a {
+  color: #b388ff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.contact-list-redpurple a:hover {
+  color: #e53935;
+}
+.contact-list-icon {
+  font-size: 1.3rem;
+  filter: drop-shadow(0 1px 2px #b388ff55);
+}
+/* --- Home Page Red/Purple/Silver & Silhouette Styles --- */
+.homepage-redpurple-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f43f5e 0%, #c084fc 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-silhouette-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  max-width: 90vw;
+  height: auto;
+  opacity: 0.10;
+  filter: grayscale(1) blur(2px) contrast(1.1);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+.angles-redpurple {
+  position: absolute;
+  top: -80px; left: -120px; right: -120px; bottom: -80px;
+  background: repeating-linear-gradient(120deg, rgba(244,63,94,0.04) 0 40px, transparent 40px 80px), repeating-linear-gradient(-120deg, rgba(192,132,252,0.06) 0 60px, transparent 60px 120px);
+  z-index: 1;
+}
+.homepage-card-redpurple {
+  background: rgba(255,255,255,0.97);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(244,63,94,0.13), 0 1.5px 8px rgba(192,132,252,0.09);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 420px;
+  margin: 2rem auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  border: 2.5px solid #c084fc;
+}
+.profile-photo-glow-redpurple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 6px #f43f5e, 0 4px 32px rgba(192,132,252,0.18);
+  border: 3px solid #c084fc;
+}
+.home-title-redpurple {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 2.2rem;
+  color: #f43f5e;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+.code-bracket-red {
+  color: #c084fc;
+  font-size: 1.3em;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+.skate-icon {
+  font-size: 1.3em;
+  margin-left: 0.1em;
+}
+.home-subtitle-redpurple {
+  font-size: 1.1rem;
+  color: #c084fc;
+  margin-bottom: 1.1em;
+  font-weight: 600;
+}
+.home-intro-redpurple {
+  font-size: 1.08rem;
+  color: #22223b;
+  margin-bottom: 1.2em;
+}
+.code-icon-red {
+  color: #f43f5e;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1.1em;
+}
+.skate-phrase-red {
+  color: #c084fc;
+  font-style: italic;
+  font-size: 1em;
+}
+.home-tags-redpurple {
+  margin-top: 1.2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+}
+.home-tags-redpurple .tag-red {
+  background: #f43f5e;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.25em 0.8em;
+  font-size: 0.97em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 1px 4px rgba(244,63,94,0.09);
+  border: 1.5px solid #c084fc;
+  transition: background 0.2s, color 0.2s;
+}
+.home-tags-redpurple .tag-red:hover {
+  background: #c084fc;
+  color: #fff;
+}
 /* --- Home Page Cobalt/Angular/Skate/Coding Styles --- */
 .homepage-cobalt-bg {
   min-height: 100vh;

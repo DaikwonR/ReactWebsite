@@ -1,14 +1,24 @@
+
 import React from 'react';
 
 export default function Contact() {
   return (
-    <div className="contact-container">
-      <h1>Contact</h1>
-      <ul>
-        <li>Email: daikwon.raney@gmail.com</li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/daikwon-raney-2a15a8294/" target="_blank" rel="noopener noreferrer">Daikwon Raney</a></li>
-        <li>Phone: 832-870-2176</li>
-      </ul>
+    <div className="contact-bg-redpurple">
+      <div className="contact-card-redpurple">
+        <div className="contact-header-icons">
+          <span className="contact-icon">📧</span>
+          <span className="contact-icon">🛹</span>
+          <span className="contact-icon">🐼</span>
+          <span className="contact-icon">&lt;/&gt;</span>
+        </div>
+        <h1 className="contact-title-redpurple">Contact</h1>
+        <div className="contact-underline-redpurple"></div>
+        <ul className="contact-list-redpurple">
+          <li><span className="contact-list-icon">📧</span> Email: <a href="mailto:daikwon.raney@gmail.com">daikwon.raney@gmail.com</a></li>
+          <li><span className="contact-list-icon">💼</span> LinkedIn: <a href="https://www.linkedin.com/in/daikwon-raney-2a15a8294/" target="_blank" rel="noopener noreferrer">Daikwon Raney</a></li>
+          <li><span className="contact-list-icon">📱</span> Phone: 832-870-2176</li>
+        </ul>
+      </div>
     </div>
   );
 }
