@@ -527,6 +527,7 @@
   box-shadow: 0 2px 12px rgba(99,102,241,0.13);
 }
 
+/* Move Google Fonts import to the very top for Vite compatibility */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 /* Make headers bold and dark for better contrast */
 h1, h2, h3, h4, h5, h6 {
