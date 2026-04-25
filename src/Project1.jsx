@@ -16,12 +16,3 @@ export default function Project1() {
     </div>
   );
 }
-        <strong>Technologies:</strong> Unity, C#, Game Design, Animation, Audio, UI/UX
-      </p>
-      <video controls width="480" style={{ borderRadius: '8px', margin: '1rem 0' }}>
-        <source src="/assets/Media1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  );
-}
