@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 
 const gameDevTechLogos = [
@@ -18,38 +19,56 @@ const gameDevTechLogos = [
 
 export default function WorkExperience() {
   return (
-    <div className="work-experience-container" style={{ position: 'relative' }}>
-      <div className="animated-bg">
-        {gameDevTechLogos.map((logo, idx) => (
-          <img
-            key={logo.alt}
-            src={logo.src}
-            alt={logo.alt}
-            className="bg-logo"
-            style={{ animationDelay: `${idx * 2}s` }}
-          />
-        ))}
-      </div>
-      <h1>Work Experience</h1>
-      <div className="project">
-        <h2>Full Stack Software Engineer, Kairos Water</h2>
-        <p><strong>January 2026 - March 2026</strong> &mdash; Hybrid (Salt Lake City, UT)</p>
-        <ul>
-          <li>Restructured legacy backend codebase to enhance maintainability, scalability, and performance.</li>
-          <li>Implemented secure and efficient backend-to-database connections for reliable data handling.</li>
-          <li>Conducted comprehensive backend-to-frontend integration testing to ensure seamless functionality and reduce defects.</li>
-        </ul>
-        <p><strong>Tech Stack:</strong> [AWS (RDS, S3, API Gateway, Lambda) • CloudFormation (YAML) • JavaScript (React + Vite) • PostgreSQL]</p>
-      </div>
-      <div className="project">
-        <h2>Software Developer in Test/Quality Assurance, FullBay</h2>
-        <p><strong>October 2025 - December 2025</strong> &mdash; Salt Lake City, Utah</p>
-        <ul>
-          <li>Honed software development and QA skills in a production environment focused on heavy-duty repair shop management software.</li>
-          <li>Managed GitHub repositories and task workflows to streamline team collaboration, issue tracking, and deployment processes.</li>
-          <li>Improved multi-language code efficiency through testing and optimization across multiple platforms.</li>
-        </ul>
-        <p><strong>Tech Stack:</strong> [Java, Playwright, AWS]</p>
+    <div className="work-bg-redpurple">
+      <div className="work-card-redpurple">
+        <div className="work-header-icons">
+          <span className="work-icon">💻</span>
+          <span className="work-icon">🛠️</span>
+          <span className="work-icon">☁️</span>
+        </div>
+        <h1 className="work-title-redpurple">Work Experience</h1>
+        <div className="work-underline-redpurple"></div>
+        <div className="work-logos-bg">
+          {gameDevTechLogos.map((logo, idx) => (
+            <img
+              key={logo.alt}
+              src={logo.src}
+              alt={logo.alt}
+              className="bg-logo"
+              style={{ animationDelay: `${idx * 2}s` }}
+            />
+          ))}
+        </div>
+        <div className="work-project-card">
+          <h2>Full Stack Software Engineer, Kairos Water</h2>
+          <p><strong>Jan 2026 - Mar 2026</strong> &mdash; Hybrid (Salt Lake City, UT)</p>
+          <ul>
+            <li>Restructured legacy backend codebase to enhance maintainability, scalability, and performance.</li>
+            <li>Implemented secure and efficient backend-to-database connections for reliable data handling.</li>
+            <li>Conducted comprehensive backend-to-frontend integration testing to ensure seamless functionality and reduce defects.</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> AWS (RDS, S3, API Gateway, Lambda), CloudFormation (YAML), JavaScript (React + Vite), PostgreSQL</p>
+        </div>
+        <div className="work-project-card">
+          <h2>Software Developer in Test/Quality Assurance, FullBay</h2>
+          <p><strong>Oct 2025 - Dec 2025</strong> &mdash; Salt Lake City, Utah</p>
+          <ul>
+            <li>Honed software development and QA skills in a production environment focused on heavy-duty repair shop management software.</li>
+            <li>Managed GitHub repositories and task workflows to streamline team collaboration, issue tracking, and deployment processes.</li>
+            <li>Improved multi-language code efficiency through testing and optimization across multiple platforms.</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> Java, Playwright, AWS</p>
+        </div>
+        <div className="work-project-card">
+          <h2>Software Engineering Intern, Motorola Solutions</h2>
+          <p><strong>May 2024 – Aug 2024</strong> &mdash; Remote</p>
+          <ul>
+            <li>Developed web-based features and tools to support internal and customer-facing applications.</li>
+            <li>Built and maintained data integration pipelines to ensure accurate and efficient data flow between systems.</li>
+            <li>Collaborated with engineers to debug issues, optimize performance, and improve system reliability.</li>
+            <li>Contributed to code reviews and followed best practices for clean, maintainable, and scalable code.</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,97 @@
+/* Work Experience Red/Purple/Silver Theme */
+.work-bg-redpurple {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e53935 0%, #b388ff 60%, #cfd8dc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+.work-card-redpurple {
+  background: rgba(255,255,255,0.95);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(44,0,77,0.18);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border: 2px solid #b388ff;
+}
+.work-header-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 2.1rem;
+}
+.work-icon {
+  filter: drop-shadow(0 2px 4px #e5393555);
+  transition: transform 0.2s;
+}
+.work-icon:hover {
+  transform: scale(1.18) rotate(-8deg);
+}
+.work-title-redpurple {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #e53935;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+.work-underline-redpurple {
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(90deg, #e53935 0%, #b388ff 100%);
+  border-radius: 3px;
+  margin: 0 auto 1.5rem auto;
+}
+.work-logos-bg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+.bg-logo {
+  width: 38px;
+  height: 38px;
+  opacity: 0.7;
+  filter: grayscale(0.2) drop-shadow(0 1px 2px #b388ff55);
+  transition: transform 0.2s, opacity 0.2s;
+}
+.bg-logo:hover {
+  opacity: 1;
+  transform: scale(1.13) rotate(-6deg);
+}
+.work-project-card {
+  background: rgba(243,239,255,0.93);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px 0 rgba(44,0,77,0.08);
+  padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  border: 1.5px solid #e53935;
+}
+.work-project-card h2 {
+  color: #b388ff;
+  font-size: 1.25rem;
+  margin-bottom: 0.3rem;
+}
+.work-project-card ul {
+  margin: 0 0 0.7rem 1.2rem;
+  padding: 0;
+  color: #444;
+  font-size: 1rem;
+}
+.work-project-card li {
+  margin-bottom: 0.3rem;
+}
+.work-project-card p {
+  color: #2d2d2d;
+  font-size: 1.07em;
+  margin-bottom: 0.7em;
+}
 /* About Page Red/Purple/Silver Theme */
 .about-bg-redpurple {
   min-height: 100vh;
