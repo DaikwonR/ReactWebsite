@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+import { playBloop } from './soundUtils';
 
 const projectCards = [
   {
@@ -32,7 +33,7 @@ export default function Projects({ onProjectPageClick }) {
             <div className="project-icon" style={{ background: proj.accent }}>{proj.icon}</div>
             <h2>{proj.title}</h2>
             <p>{proj.description}</p>
-            <button className="project-link-btn" onClick={() => onProjectPageClick && onProjectPageClick(proj.onClickIdx)}>
+            <button className="project-link-btn" onClick={e => { playBloop(); onProjectPageClick && onProjectPageClick(proj.onClickIdx); }}>
               View {proj.title}
             </button>
           </div>

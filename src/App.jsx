@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { playBloop } from './soundUtils';
 
 import Home from './Home';
 import Projects from './Projects';
@@ -12,11 +13,10 @@ import './App.css';
 
 
 const TABS = [
-  { label: 'Home', component: <Home /> },
+  { label: 'Home', component: null },
   { label: 'Projects', component: <Projects /> },
   { label: 'Work Experience', component: <WorkExperience /> },
   { label: 'About', component: <About /> },
-  { label: 'Contact', component: <Contact /> },
 ];
 
 export default function App() {
@@ -25,6 +25,7 @@ export default function App() {
   const [activeProjectPage, setActiveProjectPage] = useState(null);
 
   const handleTabClick = idx => {
+    playBloop();
     setActiveTab(idx);
     setActiveProjectPage(null);
   };
@@ -32,6 +33,10 @@ export default function App() {
   const handleProjectPageClick = (projectIdx) => {
     setActiveTab(1); // Projects tab
     setActiveProjectPage(projectIdx);
+  };
+
+  const handleContactClick = () => {
+    setActiveTab(-1); // Use -1 to indicate Contact page
   };
 
   return (
@@ -57,7 +62,9 @@ export default function App() {
         {activeTab === 1 && activeProjectPage === 0 && <Project1 />}
         {activeTab === 1 && activeProjectPage === 1 && <Project2 />}
         {activeTab === 1 && activeProjectPage === null && <Projects onProjectPageClick={handleProjectPageClick} />}
-        {activeTab !== 1 && TABS[activeTab].component}
+        {activeTab === 0 && <Home onContactClick={handleContactClick} />}
+        {activeTab > 1 && TABS[activeTab].component}
+        {activeTab === -1 && <Contact />}
       </main>
     </div>
   );

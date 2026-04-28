@@ -1,0 +1,161 @@
+/* 3D Work Experience red panda background */
+.workxp-3d-fullpage {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.workxp-3d-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a0025 0%, #2d0036 60%, #1a0025 100%);
+  overflow: hidden;
+}
+
+.workxp-3d-bg::before {
+  content: '';
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #ff006a22 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.workxp-3d-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  max-width: 700px;
+  height: 40px;
+  background: radial-gradient(ellipse at center, #ff006a55 0%, transparent 70%);
+  filter: blur(12px);
+  border-radius: 50%;
+  animation: workxp-shadow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes workxp-shadow-pulse {
+  0%, 100% { opacity: 0.6; transform: translateX(-50%) scaleX(1); }
+  50%       { opacity: 1;   transform: translateX(-50%) scaleX(1.08); }
+}
+
+.redpanda-3d-img {
+  width: 62vw;
+  max-width: 920px;
+  min-width: 300px;
+  opacity: 0.38;
+  filter:
+    blur(0.3px)
+    drop-shadow(0 0 40px #ff006aaa)
+    drop-shadow(0 16px 48px #a200ff66)
+    drop-shadow(0 4px 16px #0008);
+  transform-origin: center center;
+  animation: redpanda-float-3d 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes redpanda-float-3d {
+  0%   { transform: perspective(1100px) rotateY(18deg) rotateX(10deg) translateY(0px)   scale(1.08); }
+  25%  { transform: perspective(1100px) rotateY(12deg) rotateX(14deg) translateY(-18px) scale(1.1);  }
+  50%  { transform: perspective(1100px) rotateY(16deg) rotateX(8deg) translateY(-10px) scale(1.09); }
+  75%  { transform: perspective(1100px) rotateY(20deg) rotateX(12deg) translateY(-22px) scale(1.11); }
+  100% { transform: perspective(1100px) rotateY(18deg) rotateX(10deg) translateY(0px)   scale(1.08); }
+}
+
+.workxp-3d-content {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  padding: 5rem 2.5rem 3rem 2.5rem;
+  max-width: 700px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.workxp-3d-content section {
+  margin-bottom: 2.2rem;
+  background: rgba(26, 0, 37, 0.55);
+  border: 1px solid #ff006a33;
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  text-align: left;
+}
+
+.workxp-3d-content h1 {
+  color: #fff;
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 2px 24px #ff006acc, 0 0 6px #fff, 0 0 2px #000a;
+}
+
+.workxp-3d-content h2 {
+  color: #ffbaba;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.7rem;
+  text-shadow: 0 2px 12px #ff006a88, 0 0 2px #000a;
+}
+
+.workxp-3d-content ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.workxp-3d-content li {
+  color: #fff0f0;
+  text-shadow: 0 1px 8px #000a;
+  margin-bottom: 0.4em;
+  line-height: 1.55;
+}
+
+.workxp-3d-content .gx-bubble-label {
+  position: relative;
+  display: inline-block;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin-bottom: 1.8rem;
+}
+
+.workxp-header-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.workxp-icon {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 2px 8px #ff006a99);
+}
+
+.workxp-underline-redpink {
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff006a, #ffbaba);
+  border-radius: 2px;
+  margin: 0 auto 2rem auto;
+  box-shadow: 0 0 12px #ff006a88;
+}
+
+.workxp-title-redpink {
+  background: linear-gradient(90deg, #ff006a 0%, #ffbaba 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Orbitron', 'Rajdhani', Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+}

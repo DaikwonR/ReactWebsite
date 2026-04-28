@@ -1,0 +1,411 @@
+.gx-bubble-letters-vertical .gx-bubble-letter {
+  display: block;
+  font-family: 'Luckiest Guy', Arial, cursive, sans-serif;
+  font-size: 4vw;
+  min-font-size: 2.2rem;
+  max-font-size: 5rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
+  opacity: 0;
+  animation: gx-bubble-fade 6s infinite;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+    
+}
+/* Bubble Lettering Animation and Style */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.gx-bubble-words {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+.gx-bubble-left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 7vw;
+  min-width: 60px;
+  max-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 10;
+}
+.gx-bubble-top {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 7vh;
+  min-height: 40px;
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.gx-bubble-right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 7vw;
+  min-width: 60px;
+  max-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 10;
+}
+.gx-bubble-bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7vh;
+  min-height: 40px;
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.gx-bubble-text {
+  font-family: 'Luckiest Guy', Arial, cursive, sans-serif;
+  font-size: 2.2rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
+  opacity: 0;
+  animation: gx-bubble-fade 6s infinite;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+.gx-bubble-letters-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 96vh;
+  width: 100%;
+  z-index: 10;
+}
+.gx-bubble-letters-vertical .gx-bubble-letter {
+  font-family: 'Luckiest Guy', Arial, cursive, sans-serif;
+  font-size: 4vw;
+  min-font-size: 2.2rem;
+  max-font-size: 5rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
+  opacity: 0;
+  animation: gx-bubble-fade 6s infinite;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  /* Removed transform to keep letters upright */
+}
+.gx-bubble-left .gx-bubble-letter { animation-delay: 0s; }
+.gx-bubble-top .gx-bubble-text {
+  font-size: 4vw;
+  min-font-size: 1.5rem;
+  max-font-size: 5rem;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  width: 98vw;
+  text-align: center;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.gx-bubble-right .gx-bubble-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  height: 96vh;
+  width: 100%;
+  font-size: 4vw;
+  min-font-size: 2.2rem;
+  max-font-size: 5rem;
+  line-height: 1.05;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.gx-bubble-letters-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 98vw;
+  min-width: 300px;
+  max-width: 100vw;
+  z-index: 10;
+}
+.gx-bubble-letters-horizontal .gx-bubble-letter {
+  font-family: 'Luckiest Guy', Arial, cursive, sans-serif;
+  font-size: 4vw;
+  min-font-size: 1.5rem;
+  max-font-size: 5rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 0.12em;
+  text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
+  opacity: 0;
+  animation: gx-bubble-fade 6s infinite;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+.gx-bubble-bottom .gx-bubble-letter { animation-delay: 4.5s; }
+.gx-bubble-letters-vertical .gx-bubble-letter {
+  display: block;
+  font-family: 'Luckiest Guy', Arial, cursive, sans-serif;
+  font-size: 4vw;
+  min-font-size: 2.2rem;
+  max-font-size: 5rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
+  opacity: 0;
+  animation: gx-bubble-fade 6s infinite;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+.gx-bubble-top .gx-bubble-text { animation-delay: 1.5s; }
+.gx-bubble-right .gx-bubble-text { animation-delay: 3s; }
+.gx-bubble-bottom .gx-bubble-text { animation-delay: 4.5s; }
+
+@keyframes gx-bubble-fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+/* gxHome.css - Opera GX inspired homepage styles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@500&display=swap');
+
+.gx-home-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a0025 0%, #2d0036 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rajdhani', 'Orbitron', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.gx-angles-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: 
+    linear-gradient(120deg, transparent 60%, #ff006a33 100%),
+    linear-gradient(300deg, transparent 60%, #a200ff33 100%);
+  mix-blend-mode: lighten;
+}
+
+.gx-center-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(24, 8, 36, 0.95);
+  border-radius: 2rem;
+  box-shadow: 0 0 60px 10px #a200ff44, 0 2px 32px #000a;
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  margin: 2rem;
+  border: 2px solid #ff006a55;
+}
+
+.gx-profile-glow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.gx-profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #a200ff;
+  box-shadow: 0 0 40px 10px #ff006a88, 0 0 0 8px #1a0025;
+  object-fit: cover;
+  background: #222;
+}
+
+.gx-title {
+  font-family: 'Orbitron', 'Rajdhani', Arial, sans-serif;
+  font-size: 2.6rem;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  text-shadow: 0 2px 16px #a200ff, 0 0 2px #fff;
+}
+.gx-title-main {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 2.7rem;
+  font-family: 'Orbitron', 'Rajdhani', Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin: 0 0.1em;
+  text-shadow: 0 2px 12px #a200ff99, 0 0 2px #fff;
+}
+.gx-skate-icon {
+  font-size: 2rem;
+  margin-left: 0.2em;
+  vertical-align: middle;
+}
+
+.gx-subtitle {
+  color: #fff;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  font-family: 'Rajdhani', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 12px #ff006a, 0 0 2px #fff;
+}
+.gx-dot {
+  color: #ff006a;
+  font-weight: 900;
+  margin: 0 0.5em;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.gx-intro {
+  color: #f7f7fa;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 1px 8px #a200ff55;
+}
+.gx-code-icon {
+  color: #ff006a;
+  font-weight: bold;
+  margin-right: 0.3em;
+}
+.gx-skate-phrase {
+  color: #e0c6ff;
+  font-style: italic;
+  display: block;
+  margin-top: 0.5em;
+  text-shadow: 0 1px 8px #a200ff55;
+}
+
+.gx-tags {
+  margin-bottom: 1.5rem;
+}
+.gx-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  color: #fff9ff;
+  border-radius: 1em;
+  padding: 0.3em 1em;
+  margin: 0 0.2em 0.4em 0.2em;
+  font-size: 0.95em;
+  font-family: 'Rajdhani', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px #a200ff33;
+  text-shadow: 0 1px 8px #ff006a55;
+}
+
+.gx-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+  margin-top: 1.2em;
+}
+.gx-btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  border-radius: 2em;
+  font-size: 1.1em;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px #a200ff33;
+  border: none;
+  cursor: pointer;
+}
+.gx-btn-primary {
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  color: #fff;
+}
+.gx-btn-primary:hover {
+  background: linear-gradient(90deg, #a200ff 0%, #ff006a 100%);
+  color: #fff;
+  box-shadow: 0 0 16px #ff006a88;
+}
+.gx-btn-secondary {
+  background: #1a0025;
+  color: #ff006a;
+  border: 2px solid #ff006a;
+}
+.gx-btn-secondary:hover {
+  background: #ff006a;
+  color: #fff;
+  border-color: #a200ff;
+}
+
+@media (max-width: 600px) {
+  .gx-center-card {
+    padding: 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+  .gx-title {
+    font-size: 1.5rem;
+  }
+  .gx-profile-photo {
+    width: 80px;
+    height: 80px;
+  }
+}

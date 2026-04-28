@@ -1,11 +1,14 @@
 
+
+import './gxCard.css';
 import React from 'react';
 
 export default function Contact() {
   return (
-    <div className="contact-bg-redpurple">
-      <div className="contact-card-redpurple">
-        <div className="contact-header-icons">
+    <div className="gx-home-bg">
+      <div className="gx-card">
+        <div className="gx-bubble-label">Contact</div>
+        <div className="contact-header-icons" style={{ marginBottom: '1.2rem' }}>
           <span className="contact-icon">📧</span>
           <span className="contact-icon">🛹</span>
           <span className="contact-icon">🐼</span>

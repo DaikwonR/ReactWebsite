@@ -1,10 +1,13 @@
+
+import './gxCard.css';
 import React from 'react';
 
 export default function Project2() {
   return (
-    <div className="project-bg-redpurple">
-      <div className="project-card-redpurple">
-        <div className="project-header-icons">
+    <div className="gx-home-bg">
+      <div className="gx-card">
+        <div className="gx-bubble-label">Project: Gym Tycoon</div>
+        <div className="project-header-icons" style={{ marginBottom: '1.2rem' }}>
           <span className="project-icon">&lt;/&gt;</span>
           <span className="project-icon">🛹</span>
           <span className="project-icon">🐼</span>

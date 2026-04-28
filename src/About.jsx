@@ -1,10 +1,25 @@
-import React from 'react';
+
+import './about3d.css';
+import { playBloop } from './soundUtils';
 
 export default function About() {
   return (
-    <div className="about-bg-redpurple">
-      <div className="about-card-redpurple">
-        <div className="about-header-icons">
+    <div className="about-3d-fullpage">
+      <button
+        className="about-back-btn"
+        onClick={e => { playBloop(); window.location.href = '/'; }}
+        style={{ position: 'fixed', top: '32px', left: '32px', zIndex: 10, background: 'rgba(30,8,36,0.7)', color: '#fff', border: 'none', borderRadius: '2em', padding: '0.7em 2em', fontSize: '1.1em', fontWeight: 700, boxShadow: '0 2px 12px #a200ff55', cursor: 'pointer', transition: 'background 0.2s' }}
+        onMouseOver={e => (e.currentTarget.style.background = 'rgba(162,0,255,0.85)')}
+        onMouseOut={e => (e.currentTarget.style.background = 'rgba(30,8,36,0.7)')}
+      >
+         Back
+      </button>
+      <div className="about-3d-bg">
+        <img src="/assets/Skateboard.png" alt="3D Skateboard" className="skateboard-3d-img" />
+      </div>
+      <div className="about-3d-content">
+        <div className="gx-bubble-label">About</div>
+        <div className="about-header-icons" style={{ marginBottom: '1.2rem' }}>
           <span className="about-icon">🛹</span>
           <span className="about-icon">🐼</span>
           <span className="about-icon">&lt;/&gt;</span>

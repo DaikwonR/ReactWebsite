@@ -1,0 +1,109 @@
+/* About page: force content text to white for readability */
+.gx-card .about-title-redpurple,
+.gx-card .about-underline-redpurple,
+.gx-card section,
+.gx-card section h2,
+.gx-card section ul,
+.gx-card section li,
+.gx-card section p,
+.gx-card section span,
+.gx-card section label {
+  color: #fff !important;
+  text-shadow: 0 2px 10px #000a, 0 1px 8px #a200ff33;
+}
+
+.gx-bubble-label-train {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.gx-bubble-label-train .gx-bubble-label {
+  position: absolute;
+  width: 180px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bubble-label-train 8s linear infinite;
+  will-change: transform;
+}
+
+@keyframes bubble-label-train {
+  0%   { left: 16px; top: -32px; transform: rotate(0deg); }
+  24.9%{ left: calc(100% - 196px); top: -32px; transform: rotate(0deg); }
+  25%  { left: calc(100% - 148px); top: 16px; transform: rotate(90deg); }
+  49.9%{ left: calc(100% - 148px); top: calc(100% - 64px); transform: rotate(90deg); }
+  50%  { left: calc(100% - 196px); top: calc(100% - 16px); transform: rotate(180deg); }
+  65%  { left: 0px; top: calc(100% - 16px); transform: rotate(180deg); }
+  74.9%{ left: -32px; top: calc(100% - 16px); transform: rotate(180deg); }
+  75%  { left: -32px; top: calc(100% - 64px); transform: rotate(270deg); }
+  99.9%{ left: -32px; top: 16px; transform: rotate(270deg); }
+  100% { left: 16px; top: -32px; transform: rotate(0deg); }
+}
+/* gxCard.css - 3D card and bubble label styles for all pages */
+
+.gx-card {
+  position: relative;
+  background: linear-gradient(135deg, #2d0036 0%, #3a1a4d 100%);
+  border-radius: 2rem;
+  box-shadow: 0 0 60px 10px #a200ff66, 0 2px 32px #000a;
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 3rem auto 2rem auto;
+  border: 2.5px solid #7c2ae8;
+  text-align: center;
+  z-index: 2;
+  min-height: 350px;
+  color: #e9e6f7;
+}
+
+.gx-bubble-label {
+  position: absolute;
+  top: -1.6em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  color: #fff9ff;
+  font-family: 'Orbitron', 'Rajdhani', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.4em 1.5em;
+  border-radius: 2em;
+  box-shadow: 0 2px 12px #a200ff33;
+  border: 2.5px solid #fff2;
+  letter-spacing: 1px;
+  z-index: 3;
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow: 0 2px 12px #ff006a99, 0 0 2px #fff;
+}
+/* Lighter headings and section titles for visibility */
+.gx-card h1, .gx-card h2, .gx-card h3, .gx-card h4, .gx-card h5, .gx-card h6 {
+  color: #fff6fa;
+  text-shadow: 0 2px 16px #a200ffcc, 0 0 4px #fff, 0 0 2px #000a;
+}
+
+.gx-card ul, .gx-card li, .gx-card p, .gx-card span, .gx-card label {
+  color: #e9e6f7;
+  text-shadow: 0 2px 10px #000a, 0 1px 8px #a200ff33;
+}
+
+.gx-card li {
+  color: #111;
+  text-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .gx-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .gx-bubble-label {
+    font-size: 1rem;
+    padding: 0.3em 1em;
+  }
+}

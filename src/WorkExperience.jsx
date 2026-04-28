@@ -1,6 +1,11 @@
 
 
+
+
+import './gxCard.css';
+import './workxp3d.css';
 import React from 'react';
+import { playBloop } from './soundUtils';
 
 const gameDevTechLogos = [
   { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg', alt: 'Unity' },
@@ -17,30 +22,47 @@ const gameDevTechLogos = [
   { src: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/PlayStation_logo.svg', alt: 'PlayStation' },
 ];
 
+
 export default function WorkExperience() {
   return (
-    <div className="work-bg-redpurple">
-      <div className="work-card-redpurple">
-        <div className="work-header-icons">
-          <span className="work-icon">💻</span>
-          <span className="work-icon">🛠️</span>
-          <span className="work-icon">☁️</span>
+    <div className="workxp-3d-fullpage">
+      <button
+        className="workxp-back-btn"
+        onClick={e => { playBloop(); window.location.href = '/'; }}
+        style={{ position: 'fixed', top: '32px', left: '32px', zIndex: 10, background: 'rgba(30,8,36,0.7)', color: '#fff', border: 'none', borderRadius: '2em', padding: '0.7em 2em', fontSize: '1.1em', fontWeight: 700, boxShadow: '0 2px 12px #ff006a55', cursor: 'pointer', transition: 'background 0.2s' }}
+        onMouseOver={e => (e.currentTarget.style.background = 'rgba(255,0,106,0.85)')}
+        onMouseOut={e => (e.currentTarget.style.background = 'rgba(30,8,36,0.7)')}
+      >
+         Back
+      </button>
+      <div className="workxp-3d-bg">
+        <img src="/assets/redpanda.png" alt="3D Red Panda" className="redpanda-3d-img" />
+      </div>
+      <div className="workxp-3d-content">
+        <div className="gx-bubble-label">Work Experience</div>
+        <div className="workxp-header-icons" style={{ marginBottom: '1.2rem' }}>
+          <span className="workxp-icon">💻</span>
+          <span className="workxp-icon">🛠️</span>
+          <span className="workxp-icon">☁️</span>
         </div>
-        <h1 className="work-title-redpurple">Work Experience</h1>
-        <div className="work-underline-redpurple"></div>
-        <div className="work-logos-bg">
-          {gameDevTechLogos.map((logo, idx) => (
-            <img
-              key={logo.alt}
-              src={logo.src}
-              alt={logo.alt}
-              className="bg-logo"
-              style={{ animationDelay: `${idx * 2}s` }}
-            />
-          ))}
-        </div>
-        <div className="work-project-card">
-          <h2>Software Engineering Intern, Motorola Solutions</h2>
+        <h1 className="workxp-title-redpink">Work Experience</h1>
+        <div className="workxp-underline-redpink"></div>
+        <section>
+          <h2>Technologies & Platforms</h2>
+          <div className="work-logos-bg" style={{ marginBottom: '1.5rem' }}>
+            {gameDevTechLogos.map((logo, idx) => (
+              <img
+                key={logo.alt}
+                src={logo.src}
+                alt={logo.alt}
+                className="bg-logo"
+                style={{ animationDelay: `${idx * 2}s` }}
+              />
+            ))}
+          </div>
+        </section>
+        <section>
+          <h2><span style={{ color: '#fff' }}>Software Engineering Intern, Motorola Solutions</span></h2>
           <p><strong>Mar 2026 – May 2026</strong> &mdash; Remote</p>
           <ul>
             <li>Developed web-based features and tools to support internal and customer-facing applications.</li>
@@ -48,9 +70,9 @@ export default function WorkExperience() {
             <li>Collaborated with engineers to debug issues, optimize performance, and improve system reliability.</li>
             <li>Contributed to code reviews and followed best practices for clean, maintainable, and scalable code.</li>
           </ul>
-        </div>
-        <div className="work-project-card">
-          <h2>Full Stack Software Engineer, Kairos Water</h2>
+        </section>
+        <section>
+          <h2><span style={{ color: '#fff' }}>Full Stack Software Engineer, Kairos Water</span></h2>
           <p><strong>Jan 2026 - Mar 2026</strong> &mdash; Hybrid (Salt Lake City, UT)</p>
           <ul>
             <li>Restructured legacy backend codebase to enhance maintainability, scalability, and performance.</li>
@@ -58,9 +80,9 @@ export default function WorkExperience() {
             <li>Conducted comprehensive backend-to-frontend integration testing to ensure seamless functionality and reduce defects.</li>
           </ul>
           <p><strong>Tech Stack:</strong> AWS (RDS, S3, API Gateway, Lambda), CloudFormation (YAML), JavaScript (React + Vite), PostgreSQL</p>
-        </div>
-        <div className="work-project-card">
-          <h2>Software Developer in Test/Quality Assurance, FullBay</h2>
+        </section>
+        <section>
+          <h2><span style={{ color: '#fff' }}>Software Developer in Test/Quality Assurance, FullBay</span></h2>
           <p><strong>Oct 2025 - Dec 2025</strong> &mdash; Salt Lake City, Utah</p>
           <ul>
             <li>Honed software development and QA skills in a production environment focused on heavy-duty repair shop management software.</li>
@@ -68,7 +90,7 @@ export default function WorkExperience() {
             <li>Improved multi-language code efficiency through testing and optimization across multiple platforms.</li>
           </ul>
           <p><strong>Tech Stack:</strong> Java, Playwright, AWS</p>
-        </div>
+        </section>
       </div>
     </div>
   );
