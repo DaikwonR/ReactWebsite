@@ -1,7 +1,8 @@
 /* 3D Work Experience red panda background */
+
 .workxp-3d-fullpage {
-  min-height: 100vh;
   width: 100%;
+  min-height: 100vh;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
@@ -67,65 +68,56 @@
 @keyframes redpanda-float-3d {
   0%   { transform: perspective(1100px) rotateY(18deg) rotateX(10deg) translateY(0px)   scale(1.08); }
   25%  { transform: perspective(1100px) rotateY(12deg) rotateX(14deg) translateY(-18px) scale(1.1);  }
-  50%  { transform: perspective(1100px) rotateY(16deg) rotateX(8deg) translateY(-10px) scale(1.09); }
+  50%  { transform: perspective(1100px) rotateY(16deg) rotateX(8deg)  translateY(-10px) scale(1.09); }
   75%  { transform: perspective(1100px) rotateY(20deg) rotateX(12deg) translateY(-22px) scale(1.11); }
   100% { transform: perspective(1100px) rotateY(18deg) rotateX(10deg) translateY(0px)   scale(1.08); }
 }
 
+/* ── Back button ──────────────────────────────────────────────── */
+.workxp-back-btn {
+  position: fixed;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 20;
+  background: rgba(26, 0, 37, 0.75);
+  color: #ffbaba;
+  border: 2px solid #ff006a88;
+  border-radius: 2em;
+  padding: 0.55em 1.4em;
+  font-size: 0.95rem;
+  font-family: 'Rajdhani', 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, border-color 0.18s;
+  box-shadow: 0 2px 12px #ff006a33;
+}
+
+.workxp-back-btn:hover {
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 16px #ff006a77;
+}
+
+/* ── Content ──────────────────────────────────────────────────── */
 .workxp-3d-content {
   position: relative;
   z-index: 2;
   margin: 0 auto;
-  padding: 5rem 2.5rem 3rem 2.5rem;
+  padding: 3rem 2rem 3rem 2rem;
   max-width: 700px;
   width: 100%;
   color: #fff;
   text-align: center;
-}
-
-.workxp-3d-content section {
-  margin-bottom: 2.2rem;
-  background: rgba(26, 0, 37, 0.55);
-  border: 1px solid #ff006a33;
-  border-radius: 1.2rem;
-  padding: 1.2rem 1.5rem;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  text-align: left;
-}
-
-.workxp-3d-content h1 {
-  color: #fff;
-  font-size: 2.8rem;
-  margin-bottom: 0.3rem;
-  text-shadow: 0 2px 24px #ff006acc, 0 0 6px #fff, 0 0 2px #000a;
-}
-
-.workxp-3d-content h2 {
-  color: #ffbaba;
-  font-size: 1.15rem;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.7rem;
-  text-shadow: 0 2px 12px #ff006a88, 0 0 2px #000a;
-}
-
-.workxp-3d-content ul {
-  margin: 0;
-  padding-left: 1.2em;
-}
-
-.workxp-3d-content li {
-  color: #fff0f0;
-  text-shadow: 0 1px 8px #000a;
-  margin-bottom: 0.4em;
-  line-height: 1.55;
+  box-sizing: border-box;
 }
 
 .workxp-3d-content .gx-bubble-label {
   position: relative;
   display: inline-block;
-  top: auto;
-  left: auto;
+  top: auto; left: auto;
   transform: none;
   margin-bottom: 1.8rem;
 }
@@ -158,4 +150,163 @@
   font-family: 'Orbitron', 'Rajdhani', Arial, sans-serif;
   font-weight: 900;
   letter-spacing: 2px;
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ── Internship selector buttons ──────────────────────────────── */
+.workxp-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.workxp-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  background: rgba(26, 0, 37, 0.7);
+  color: #ffbaba;
+  border: 2px solid #ff006a55;
+  border-radius: 2em;
+  padding: 0.55em 1.4em;
+  font-size: 1rem;
+  font-family: 'Rajdhani', 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, color 0.18s, box-shadow 0.18s;
+  backdrop-filter: blur(4px);
+}
+
+.workxp-tab-btn:hover {
+  background: rgba(255, 0, 106, 0.18);
+  border-color: #ff006a;
+  color: #fff;
+  box-shadow: 0 0 12px #ff006a55;
+}
+
+.workxp-tab-btn.active {
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 20px #ff006a77, 0 2px 8px #0006;
+}
+
+.workxp-tab-emoji {
+  font-size: 1.1em;
+}
+
+/* ── Detail panel ─────────────────────────────────────────────── */
+.workxp-detail-panel {
+  background: rgba(26, 0, 37, 0.62);
+  border: 1px solid #ff006a44;
+  border-radius: 1.4rem;
+  padding: 1.6rem 1.8rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-align: left;
+  box-shadow: 0 4px 32px #ff006a22;
+  animation: panel-fade-in 0.25s ease;
+}
+
+@keyframes panel-fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.workxp-job-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+.workxp-job-emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px #ff006a99);
+}
+
+.workxp-job-title {
+  color: #fff6fa !important;
+  font-size: 1.2rem !important;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.2rem 0 !important;
+  text-shadow: 0 2px 12px #ff006a88;
+  letter-spacing: 0.5px;
+  -webkit-text-fill-color: unset !important;
+}
+
+.workxp-job-company {
+  color: #ffbaba;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Rajdhani', Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.workxp-job-meta {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  color: #e0baff;
+  font-size: 0.92rem;
+  font-family: 'Rajdhani', Arial, sans-serif;
+}
+
+.workxp-job-bullets {
+  margin: 0 0 1rem 0;
+  padding-left: 1.2em;
+}
+
+.workxp-job-bullets li {
+  color: #fff0f0;
+  text-shadow: 0 1px 8px #000a;
+  margin-bottom: 0.5em;
+  line-height: 1.55;
+  font-size: 0.97rem;
+}
+
+.workxp-stack {
+  background: rgba(255, 0, 106, 0.1);
+  border: 1px solid #ff006a44;
+  border-radius: 0.7rem;
+  padding: 0.6rem 1rem;
+  color: #ffbaba;
+  font-size: 0.9rem;
+  font-family: 'Rajdhani', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.workxp-stack strong {
+  color: #fff;
+  margin-right: 0.3em;
+}
+
+@media (max-width: 600px) {
+  .workxp-3d-content {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .workxp-btn-row {
+    gap: 0.5rem;
+  }
+  .workxp-tab-btn {
+    font-size: 0.88rem;
+    padding: 0.45em 1em;
+  }
+  .workxp-title-redpink {
+    font-size: 1.8rem;
+  }
+  .workxp-back-btn {
+    top: 0.6rem;
+    left: 0.6rem;
+    font-size: 0.85rem;
+    padding: 0.4em 1em;
+  }
 }

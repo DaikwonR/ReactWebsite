@@ -1,9 +1,8 @@
-
-
 import './gxCard.css';
 import React from 'react';
+import { playBloop } from './soundUtils';
 
-export default function Contact() {
+export default function Contact({ onHomeClick }) {
   return (
     <div className="gx-home-bg">
       <div className="gx-card">
@@ -22,6 +21,15 @@ export default function Contact() {
           <li><span className="contact-list-icon">📱</span> Phone: 832-870-2176</li>
           <li><span className="contact-list-icon">📄</span> <a href="https://docs.google.com/document/d/1qhN85cQEBavsygj26kzAuwFBilKxqsr5jaPIQuDNeSI/edit?tab=t.0#heading=h.kgica5kc1frw" target="_blank" rel="noopener noreferrer">View My Resume</a></li>
         </ul>
+        {onHomeClick && (
+          <button
+            className="gx-btn gx-btn-secondary"
+            style={{ marginTop: '1.5rem' }}
+            onClick={() => { playBloop(); onHomeClick(); }}
+          >
+            ← Home
+          </button>
+        )}
       </div>
     </div>
   );

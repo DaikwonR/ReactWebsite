@@ -1,0 +1,105 @@
+/* 3D fullpage video background for project pages */
+.project3d-fullpage {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  background: #1a0022;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project3d-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.7) blur(1.5px) saturate(1.2) drop-shadow(0 0 80px #a200ff88);
+  pointer-events: none;
+}
+
+.project3d-content {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  min-height: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30,8,36,0.32);
+  backdrop-filter: blur(2.5px) saturate(1.2);
+  box-shadow: 0 0 80px #a200ff44, 0 0 0 100vw rgba(30,8,36,0.18) inset;
+}
+
+.project3d-card {
+  background: rgba(30,8,36,0.48);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 48px #a200ff55, 0 1.5px 0 #fff2, 0 0 0 2px #a200ff33 inset;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 600px;
+  width: 90vw;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 2px 12px #1a0022cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: project3d-float 2.5s cubic-bezier(.4,1.6,.6,1) infinite alternate;
+}
+
+@keyframes project3d-float {
+  0% { transform: translateY(0) scale(1) rotateY(-6deg); }
+  100% { transform: translateY(-18px) scale(1.01) rotateY(6deg); }
+}
+
+.project3d-bubble-label {
+  font-family: 'Luckiest Guy', 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+  background: linear-gradient(90deg, #a200ff 0%, #ff006a 100%);
+  border-radius: 2em;
+  padding: 0.4em 1.5em;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px #ff006a55;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px #1a0022cc;
+}
+
+.project3d-header-icons {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 0.7em;
+}
+
+.project3d-title {
+  font-family: 'Orbitron', 'Rajdhani', sans-serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 12px #a200ffcc;
+}
+
+.project3d-underline {
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(90deg, #a200ff 0%, #ff006a 100%);
+  border-radius: 2em;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px #ff006a55;
+}
+
+.project3d-text {
+  color: #fff;
+  text-shadow: 0 2px 8px #1a0022cc;
+  font-size: 1.1rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}

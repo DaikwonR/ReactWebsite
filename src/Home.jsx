@@ -16,10 +16,18 @@ export default function Home({ onContactClick }) {
         </div>
       </div>
       <div className="gx-bubble-words gx-bubble-top">
-        <span className="gx-bubble-text">To</span>
+        <div className="gx-bubble-letters-horizontal">
+          {"TO".split("").map((l, i) => (
+            <span className="gx-bubble-letter" key={i}>{l}</span>
+          ))}
+        </div>
       </div>
       <div className="gx-bubble-words gx-bubble-right">
-        <span className="gx-bubble-text">My</span>
+        <div className="gx-bubble-letters-vertical">
+          {"MY".split("").map((l, i) => (
+            <span className="gx-bubble-letter" key={i}>{l}</span>
+          ))}
+        </div>
       </div>
       <div className="gx-bubble-words gx-bubble-bottom">
         <div className="gx-bubble-letters-horizontal">

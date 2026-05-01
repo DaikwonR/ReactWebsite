@@ -1,14 +1,13 @@
 /* 3D About Me skateboard background */
 
 .about-3d-fullpage {
+  width: 100%;
   min-height: 100vh;
-  width: 100%;          /* was 100vw — that overflowed and covered the navbar */
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-/* Dark purple gradient background — fixed so it stays while content scrolls */
 .about-3d-bg {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
@@ -21,7 +20,6 @@
   overflow: hidden;
 }
 
-/* Radial glow behind the board to sell the 3D lighting */
 .about-3d-bg::before {
   content: '';
   position: absolute;
@@ -32,7 +30,6 @@
   pointer-events: none;
 }
 
-/* Ground reflection / shadow plane */
 .about-3d-bg::after {
   content: '';
   position: absolute;
@@ -53,7 +50,6 @@
   50%       { opacity: 1;   transform: translateX(-50%) scaleX(1.08); }
 }
 
-/* The skateboard image — 3D perspective + slow float animation */
 .skateboard-3d-img {
   width: 62vw;
   max-width: 920px;
@@ -77,20 +73,19 @@
   100% { transform: perspective(1100px) rotateY(-22deg) rotateX(14deg) translateY(0px)   scale(1.08); }
 }
 
-/* ── Content overlay ───────────────────────────────────────────── */
+/* ── Content ──────────────────────────────────────────────────── */
 .about-3d-content {
-  position: relative;   /* relative so it stacks on top of the fixed bg */
+  position: relative;
   z-index: 2;
   margin: 0 auto;
-  padding: 5rem 2.5rem 3rem 2.5rem;
+  padding: 3rem 2.5rem 3rem 2.5rem;
   max-width: 700px;
   width: 100%;
   color: #fff;
   text-align: center;
+  box-sizing: border-box;
 }
 
-/* Subtle glassy backdrop on the content so text stays readable
-   over the skateboard without hiding the effect */
 .about-3d-content section {
   margin-bottom: 2.2rem;
   background: rgba(26, 0, 37, 0.55);
@@ -102,7 +97,6 @@
   text-align: left;
 }
 
-/* Headings */
 .about-3d-content h1 {
   color: #fff;
   font-size: 2.8rem;
@@ -118,7 +112,6 @@
   text-shadow: 0 2px 12px #a200ff88, 0 0 2px #000a;
 }
 
-/* List items */
 .about-3d-content ul {
   margin: 0;
   padding-left: 1.2em;
@@ -131,7 +124,6 @@
   line-height: 1.55;
 }
 
-/* Bubble label — reuse same class from gxCard */
 .about-3d-content .gx-bubble-label {
   position: relative;
   display: inline-block;
@@ -141,7 +133,6 @@
   margin-bottom: 1.8rem;
 }
 
-/* Header emoji icons */
 .about-header-icons {
   display: flex;
   justify-content: center;
@@ -153,7 +144,6 @@
   filter: drop-shadow(0 2px 8px #a200ff99);
 }
 
-/* Gradient underline accent */
 .about-underline-redpurple {
   width: 120px;
   height: 3px;
@@ -171,4 +161,69 @@
   font-family: 'Orbitron', 'Rajdhani', Arial, sans-serif;
   font-weight: 900;
   letter-spacing: 2px;
+}
+
+/* Show More button */
+.about-show-more-btn {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  background: linear-gradient(90deg, #ff006a, #a200ff);
+  color: #fff;
+  border: none;
+  border-radius: 1.2em;
+  padding: 0.7em 2em;
+  font-size: 1em;
+  font-family: 'Rajdhani', 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: 0 2px 12px #a200ff55;
+  cursor: pointer;
+  transition: opacity 0.18s;
+}
+
+.about-show-more-btn:hover {
+  opacity: 0.85;
+}
+
+/* Frameworks panel animates in */
+.about-frameworks-panel {
+  animation: panel-fade-in 0.25s ease;
+}
+
+@keyframes panel-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .about-3d-content {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .about-3d-content h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Home button at bottom of About content */
+.about-home-btn {
+  display: block;
+  margin: 0 auto 2rem auto;
+  background: rgba(26, 0, 37, 0.75);
+  color: #e0baff;
+  border: 2px solid #a200ff88;
+  border-radius: 2em;
+  padding: 0.55em 1.4em;
+  font-size: 0.95rem;
+  font-family: 'Rajdhani', 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 12px #a200ff33;
+}
+
+.about-home-btn:hover {
+  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 16px #a200ff77;
 }

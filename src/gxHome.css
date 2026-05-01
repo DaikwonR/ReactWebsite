@@ -1,5 +1,4 @@
-.gx-bubble-letters-vertical .gx-bubble-letter {
-  display: block;
+.gx-bubble-letters-horizontal .gx-bubble-letter {
   font-family: 'Luckiest Guy', Arial, cursive, sans-serif;
   font-size: 4vw;
   min-font-size: 2.2rem;
@@ -13,15 +12,16 @@
   letter-spacing: 0.08em;
   text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
   opacity: 0;
-  animation: gx-bubble-fade 6s infinite;
+  animation: gx-bubble-fade 2.5s infinite;
   border: none;
   box-shadow: none;
   padding: 0;
   margin: 0;
-    
 }
-/* Bubble Lettering Animation and Style */
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@500&display=swap');
+
+
 
 .gx-bubble-words {
   position: absolute;
@@ -78,24 +78,6 @@
   justify-content: center;
   z-index: 10;
 }
-.gx-bubble-text {
-  font-family: 'Luckiest Guy', Arial, cursive, sans-serif;
-  font-size: 2.2rem;
-  color: #fff;
-  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  letter-spacing: 0.08em;
-  text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
-  opacity: 0;
-  animation: gx-bubble-fade 6s infinite;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-}
 .gx-bubble-letters-vertical {
   display: flex;
   flex-direction: column;
@@ -119,7 +101,7 @@
   letter-spacing: 0.08em;
   text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
   opacity: 0;
-  animation: gx-bubble-fade 6s infinite;
+  animation: gx-bubble-fade 2.5s infinite;
   border: none;
   box-shadow: none;
   padding: 0;
@@ -162,26 +144,6 @@
   max-width: 100vw;
   z-index: 10;
 }
-.gx-bubble-letters-horizontal .gx-bubble-letter {
-  font-family: 'Luckiest Guy', Arial, cursive, sans-serif;
-  font-size: 4vw;
-  min-font-size: 1.5rem;
-  max-font-size: 5rem;
-  color: #fff;
-  background: linear-gradient(90deg, #ff006a 0%, #a200ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  letter-spacing: 0.12em;
-  text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
-  opacity: 0;
-  animation: gx-bubble-fade 6s infinite;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-}
 .gx-bubble-bottom .gx-bubble-letter { animation-delay: 4.5s; }
 .gx-bubble-letters-vertical .gx-bubble-letter {
   display: block;
@@ -198,7 +160,7 @@
   letter-spacing: 0.08em;
   text-shadow: 0 2px 8px #a200ff, 0 0 2px #fff;
   opacity: 0;
-  animation: gx-bubble-fade 6s infinite;
+  animation: gx-bubble-fade 2.5s infinite;
   border: none;
   box-shadow: none;
   padding: 0;

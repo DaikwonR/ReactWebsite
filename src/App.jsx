@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { playBloop } from './soundUtils';
 
 import Home from './Home';
@@ -11,16 +11,14 @@ import WorkExperience from './WorkExperience';
 import AnimatedBackground from './AnimatedBackground';
 import './App.css';
 
-
 const TABS = [
-  { label: 'Home', component: null },
-  { label: 'Projects', component: <Projects /> },
-  { label: 'Work Experience', component: <WorkExperience /> },
-  { label: 'About', component: <About /> },
+  { label: 'Home' },
+  { label: 'Projects' },
+  { label: 'Work Experience' },
+  { label: 'About' },
 ];
 
 export default function App() {
-
   const [activeTab, setActiveTab] = useState(0);
   const [activeProjectPage, setActiveProjectPage] = useState(null);
 
@@ -31,12 +29,24 @@ export default function App() {
   };
 
   const handleProjectPageClick = (projectIdx) => {
-    setActiveTab(1); // Projects tab
+    setActiveTab(1);
     setActiveProjectPage(projectIdx);
   };
 
   const handleContactClick = () => {
-    setActiveTab(-1); // Use -1 to indicate Contact page
+    setActiveTab(-1);
+  };
+
+  const handleHomeClick = () => {
+    playBloop();
+    setActiveTab(0);
+    setActiveProjectPage(null);
+  };
+
+  const handleProjectsClick = () => {
+    playBloop();
+    setActiveTab(1);
+    setActiveProjectPage(null);
   };
 
   return (
@@ -59,12 +69,13 @@ export default function App() {
         </ul>
       </nav>
       <main className="tab-content">
-        {activeTab === 1 && activeProjectPage === 0 && <Project1 />}
-        {activeTab === 1 && activeProjectPage === 1 && <Project2 />}
-        {activeTab === 1 && activeProjectPage === null && <Projects onProjectPageClick={handleProjectPageClick} />}
         {activeTab === 0 && <Home onContactClick={handleContactClick} />}
-        {activeTab > 1 && TABS[activeTab].component}
-        {activeTab === -1 && <Contact />}
+        {activeTab === 1 && activeProjectPage === null && <Projects onProjectPageClick={handleProjectPageClick} onHomeClick={handleHomeClick} />}
+        {activeTab === 1 && activeProjectPage === 0 && <Project1 onBackClick={handleProjectsClick} />}
+        {activeTab === 1 && activeProjectPage === 1 && <Project2 onBackClick={handleProjectsClick} />}
+        {activeTab === 2 && <WorkExperience onHomeClick={handleHomeClick} />}
+        {activeTab === 3 && <About onHomeClick={handleHomeClick} />}
+        {activeTab === -1 && <Contact onHomeClick={handleHomeClick} />}
       </main>
     </div>
   );
